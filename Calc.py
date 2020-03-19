@@ -1,30 +1,45 @@
-from tkinter import* #Import from tkinter
+#Import from tkinter
+from tkinter import* 
 
 #Creates the btnClick function which takes in a number and returns
 #that number in operator as a string value and then inputs that number
 #into the entry box
+
 def btnClick (numbers):
     global operator
     operator=operator + str(numbers)
     text_Inp.set(operator)
 
-#
+#Creates the btnClear function which makes the operator = ""
+#and sets the entry box = operator which clears the entry box.
+
 def btnClear():
     global operator
     operator=""
     text_Inp.set("")
-
+    
+#Creates the btnEquals funciton which takes the str in the entry box
+#and converts the str with eval into an operatable equation, then
+#evaluates the function, places the answer in the entry box, and clears
+#the operator.
+    
 def btnEquals():
     global operator
     sumup=str(eval(operator))
     text_Inp.set(sumup)
     operator=""
     
+#sets calc= window
+calc = Tk() 
 
-calc = Tk() #sets calc= window
-calc.title ("Calculator") #creates the title of the program in the window
+#creates the title of the program in the window
+calc.title ("Calculator") 
+
+#sets the operator to ""
 operator = ""  #sets the operator to ""
-text_Inp = StringVar() #Makes the text_Inp variable a string variable
+
+#Makes the text_Inp variable a string variable
+text_Inp = StringVar() 
 
 #Sets the display area of the calculator
 txtDisp = Entry(calc,font=('arial', 20, 'bold'), textvariable =text_Inp, bd=30, insertwidth=4,
@@ -82,4 +97,5 @@ btnEquals=Button(calc,padx=16,pady=16,bd=8, fg ="black",font=('arial', 20,'bold'
 Division=Button(calc,padx=16,pady=16,bd=8, fg ="black",font=('arial', 20,'bold'),
             text ="/", bg = "powder blue",command=lambda:btnClick("/")).grid(row=4,column=3)  
 
-calc.mainloop() #Ends the main loop
+#Ends the main loop
+calc.mainloop() 
