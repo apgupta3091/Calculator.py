@@ -97,5 +97,5 @@ btnEquals=Button(calc,padx=16,pady=16,bd=8, fg ="black",font=('arial', 20,'bold'
 Division=Button(calc,padx=16,pady=16,bd=8, fg ="black",font=('arial', 20,'bold'),
             text ="/", bg = "powder blue",command=lambda:btnClick("/")).grid(row=4,column=3)  
 
-#Ends the main loop
+#Ends the calc.main loop
 calc.mainloop() 
