@@ -7,7 +7,7 @@ from tkinter import*
 
 def btnClick (numbers):
     global operator
-    operator=operator + str(numbers)
+    operator = operator + str(numbers)
     text_Inp.set(operator)
 
 #Creates the btnClear function which makes the operator = ""
@@ -15,7 +15,7 @@ def btnClick (numbers):
 
 def btnClear():
     global operator
-    operator=""
+    operator= ""
     text_Inp.set("")
     
 #Creates the btnEquals funciton which takes the str in the entry box
@@ -25,15 +25,15 @@ def btnClear():
     
 def btnEquals():
     global operator
-    sumup=str(eval(operator))
+    sumup = str(eval(operator))
     text_Inp.set(sumup)
-    operator=""
+    operator = ""
     
 #sets calc= window
 calc = Tk() 
 
 #creates the title of the program in the window
-calc.title ("Calculator") 
+calc.title("Calculator") 
 
 #sets the operator to ""
 operator = ""  #sets the operator to ""
