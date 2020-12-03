@@ -4,7 +4,6 @@ from tkinter import*
 #Creates the btnClick function which takes in a number and returns
 #that number in operator as a string value and then inputs that number
 #into the entry box
-
 def btnClick (numbers):
     global operator
     operator = operator + str(numbers)
@@ -12,7 +11,6 @@ def btnClick (numbers):
 
 #Creates the btnClear function which makes the operator = ""
 #and sets the entry box = operator which clears the entry box.
-
 def btnClear():
     global operator
     operator= ""
@@ -21,8 +19,7 @@ def btnClear():
 #Creates the btnEquals funciton which takes the str in the entry box
 #and converts the str with eval into an operatable equation, then
 #evaluates the function, places the answer in the entry box, and clears
-#the operator.
-    
+#the operator.  
 def btnEquals():
     global operator
     sumup = str(eval(operator))
